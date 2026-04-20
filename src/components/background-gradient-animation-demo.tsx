@@ -2,12 +2,16 @@
 import React from "react";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { useRouter } from "next/navigation";
-
+import { motion } from 'motion/react'
 export default function BackgroundGradientAnimationDemo() {
   const router = useRouter()
   return (
     <BackgroundGradientAnimation>
-      <div className="absolute z-50 flex-col gap-15 md:mt-5 md:gap-0 justify-center md:flex-row flex items-center md:justify-between min-h-screen w-full text-white font-bold p-10">
+      <motion.div
+      initial={{opacity:0, y:10}}
+      animate={{opacity:1, y:0}}
+      transition={{duration:1}}
+      className="absolute z-50 flex-col gap-15 md:mt-5 md:gap-0 justify-center md:flex-row flex items-center md:justify-between min-h-screen w-full text-white font-bold p-10">
         <div className="flex flex-col items-center md:block">
           <h1 className="text-5xl text-center md:text-left md:text-5xl font-bold">Chef Serena</h1>
           <p className="text-[9px] text-center md:text-left md:text-[12px] mt-2 font-light font-mono pl-2 text-zinc-400">Get Started. Add your ingredients. Generate Recipe. <br /> Wait for few seconds. Get yourself a recipe from our AI Chef</p>
@@ -37,7 +41,7 @@ export default function BackgroundGradientAnimationDemo() {
              </video>
           </div>
         </div>
-      </div>
+      </motion.div>
     </BackgroundGradientAnimation>
   );
 }

@@ -10,7 +10,6 @@ export async function POST(req:NextRequest){
         async function getRecipeFromGemini(ingredientsArr:any) {
             const ingredientsString = ingredientsArr.join(", ")
             try {
-                
                 const systemMessage = `${SYSTEM_PROMPT}\n\nI have ${ingredientsString}. Please give me a recipe you'd recommend I make!`
                 
                 const response = await genAI.models.generateContent({
@@ -23,7 +22,6 @@ export async function POST(req:NextRequest){
             }
         }
         recipe = await getRecipeFromGemini((await req.json()).ingredientsList)
-        console.log(recipe)
         return NextResponse.json(recipe)
 }
 
