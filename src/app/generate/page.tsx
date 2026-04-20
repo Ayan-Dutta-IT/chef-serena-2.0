@@ -1,6 +1,5 @@
 'use client'
 import Navbar from '@/components/Navbar'
-import Recipe from '@/components/Recipe'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
