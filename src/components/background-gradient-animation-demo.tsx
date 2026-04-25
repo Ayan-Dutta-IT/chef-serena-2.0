@@ -36,7 +36,7 @@ export default function BackgroundGradientAnimationDemo() {
           </div>
           <div className="shadow-2xl drop-shadow-2xl border-t-2 bg-zinc-200 w-full">
             
-             <video preload="none" autoPlay muted loop className="w-full">
+             <video preload="auto" autoPlay muted loop className="w-full">
              <source src="/chefserena.mp4" type="video/mp4" />
              </video>
           </div>
