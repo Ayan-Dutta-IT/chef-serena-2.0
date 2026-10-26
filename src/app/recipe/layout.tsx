@@ -1,3 +1,4 @@
+import Script from "next/script";
 
 export default function Layout({
   children,
@@ -7,10 +8,11 @@ export default function Layout({
   return (
       <div>
         {children}
-        <script
+        <Script
      src="https://supportly-ai.vercel.app/chatBot.js"
-     data-owner-id="usr_121269372684601098">
-</script>
+     data-owner-id="usr_121269372684601098"
+     strategy="afterInteractive">
+</Script>
 </div>
   );
 }
